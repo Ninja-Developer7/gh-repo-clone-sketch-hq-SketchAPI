@@ -1,0 +1,30 @@
+import git
+import os
+
+def clone_repository(repo_url, clone_dir):
+    """
+    Clones the given repository into the specified directory.
+    
+    Args:
+    repo_url (str): The URL of the repository to be cloned.
+    clone_dir (str): The directory where the repository should be cloned.
+    """
+    try:
+        # Ensure the clone directory exists
+        if not os.path.exists(clone_dir):
+            os.makedirs(clone_dir)
+        
+        # Clone the repository
+        print(f"Cloning repository from {repo_url} to {clone_dir}...")
+        git.Repo.clone_from(repo_url, clone_dir)
+        print("Repository cloned successfully!")
+    except Exception as e:
+        print(f"An error occurred while cloning the repository: {e}")
+
+# Example usage
+if __name__ == "__main__":
+    # Replace with your repository URL and desired clone directory
+    repository_url = "https://github.com/user/repo.git"
+    clone_directory = "./cloned_repo"
+
+    clone_repository(repository_url, clone_directory)
