@@ -1,0 +1,9 @@
+root-directory/
+├── docs/
+│   ├── CONTRIBUTING.md
+│   ├── CODE_OF_CONDUCT.md
+│   ├── README.md
+│   └── other-docs.md
+├── src/
+├── tests/
+└── ...
